@@ -1,0 +1,36 @@
+.hero {
+  font-family: Inter;
+}
+.input {
+  margin-top: 40px;
+  height: 56px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--text-foreground);
+  width: 100%;
+  padding: 16px;
+  outline: none;
+}
+.btn {
+  margin-top: 16px;
+  height: 56px;
+  border: 1px solid #9e9dfb;
+  border-radius: 12px;
+  background: rgb(161, 156, 254);
+  background: linear-gradient(
+    -280deg,
+    rgba(161, 156, 254, 1) 0%,
+    rgba(125, 139, 252, 1) 28%,
+    rgba(161, 153, 247, 1) 82%,
+    rgba(195, 188, 246, 1) 100%
+  );
+
+  overflow: hidden;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}

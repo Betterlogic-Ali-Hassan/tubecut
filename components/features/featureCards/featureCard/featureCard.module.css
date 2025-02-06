@@ -1,0 +1,26 @@
+.card {
+  align-items: center;
+  background: var(--card);
+  border-radius: 12px;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 12px;
+  height: min-content;
+  justify-content: center;
+  overflow: visible;
+  padding: 24px;
+  position: relative;
+  width: 240px;
+}
+.card h1 {
+  font-size: 20px;
+  letter-spacing: -0.08px;
+  line-height: 28px;
+}
+.card p {
+  text-align: center;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}

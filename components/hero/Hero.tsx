@@ -1,0 +1,26 @@
+import React from "react";
+import styles from "./hero.module.css";
+import { cn } from "@/lib/utils";
+const Hero = () => {
+  return (
+    <section className={cn("mt-[60px] ", styles.hero)}>
+      <div className='flex items-center gap-1 flex-col w-[634px]'>
+        <h1 className='!font-medium text-[32px]'>Take Youtube Offline</h1>
+        <p className='text-center text-xl leading-[32px] w-full'>
+          Tubecut lets you easily download and trim <br />
+          YouTube videos for free high quality.
+        </p>
+      </div>
+      <input
+        type='text'
+        name='text'
+        id='text'
+        placeholder='https://www.youtube.com/watch?v=DKpzCm_nxTo'
+        className={styles.input}
+      />
+      <button className={styles.btn}>Download</button>
+    </section>
+  );
+};
+
+export default Hero;

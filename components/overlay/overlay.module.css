@@ -1,0 +1,13 @@
+.overlay-wrapper {
+  aspect-ratio: 1.486820428336079 / 1;
+  flex: none;
+  height: 617px;
+  left: calc(50.00000000000002% - 917px / 2);
+  overflow: visible;
+  pointer-events: none;
+  position: absolute;
+  transform: perspective(1200px);
+  user-select: none;
+  width: 917px;
+  z-index: 10;
+}
