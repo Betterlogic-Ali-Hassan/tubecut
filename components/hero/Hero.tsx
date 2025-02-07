@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./hero.module.css";
 import { cn } from "@/lib/utils";
+import Button from "../ui/button/Button";
 const Hero = () => {
   return (
     <section className={cn("mt-[60px] ", styles.hero)}>
@@ -18,7 +19,7 @@ const Hero = () => {
         placeholder='https://www.youtube.com/watch?v=DKpzCm_nxTo'
         className={styles.input}
       />
-      <button className={styles.btn}>Download</button>
+      <Button url='/player'>Download</Button>
     </section>
   );
 };

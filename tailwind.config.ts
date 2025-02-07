@@ -14,6 +14,8 @@ export default {
 		card: 'var(--card)',
 		border: 'var(--border)',
 		input: 'var(--card)',
+		link: 'var(--link-color)',
+		'text-foreground': 'var(--text-foreground)'
 	  },
 	  boxShadow: {
 		custom: 'var(--shadow)', // Custom shadow class

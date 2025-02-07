@@ -1,10 +1,10 @@
 import React from "react";
-import HighlightBase from "./hightlightBase/HighlightBase";
+import HighlightCards from "./highlightCards/HighlightCards";
 
 const Highlights = () => {
   return (
     <section>
-      <HighlightBase />
+      <HighlightCards />
     </section>
   );
 };
