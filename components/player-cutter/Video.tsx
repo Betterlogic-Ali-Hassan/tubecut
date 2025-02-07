@@ -1,15 +1,19 @@
+"use client";
 import React from "react";
-
-const Video = () => {
+import ReactPlayer from "react-player";
+interface VideoPlayerProps {
+  onDuration: (duration: number) => void;
+  seeking: boolean;
+}
+const Video = ({ onDuration, seeking }: VideoPlayerProps) => {
   return (
     <>
-      <iframe
-        width='560'
-        height='315'
-        src='https://www.youtube.com/embed/cIPeJmDrc_g?si=ftIBVUMuRBfFQvIK'
-        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-        className='rounded-lg border border-[#16181C]'
-      ></iframe>
+      <ReactPlayer
+        url='https://www.youtube.com/embed/cIPeJmDrc_g?si=ftIBVUMuRBfFQvIK '
+        className=' h-[315px] w-[560px] overflow-hidden'
+        onDuration={onDuration}
+        playing={seeking}
+      />
       <h4 className='text-xl font-inter mt-4 text-[#ffffffe5] tracking-wide'>
         How Pakistani Family Vloggers Are Fooling You
       </h4>

@@ -117,3 +117,7 @@ p {
   text-decoration: underline;
   color: var(--link-hover-color);
 }
+iframe {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
