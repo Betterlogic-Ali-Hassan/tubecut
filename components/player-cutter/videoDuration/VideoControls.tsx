@@ -1,12 +1,11 @@
-import React from "react";
 import styles from "./videoControls.module.css";
 import { RxStopwatch } from "react-icons/rx";
 import { Slider } from "@/components/ui/slider";
 import { formatTime } from "@/lib/format-time";
 interface VideoControlsProps {
   duration: number;
-  range: number[];
-  onRangeChange: (newRange: number[]) => void;
+  range: [number, number];
+  onRangeChange: (newRange: [number, number]) => void;
   onSeekMouseDown: () => void;
   onSeekMouseUp: () => void;
 }
@@ -51,6 +50,7 @@ const VideoControls = ({
           onValueChange={onRangeChange}
           onMouseDown={onSeekMouseDown}
           onMouseUp={onSeekMouseUp}
+          showTooltip
         />
       </div>
     </>

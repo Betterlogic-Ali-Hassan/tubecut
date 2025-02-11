@@ -119,5 +119,7 @@ p {
 }
 iframe {
   border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border: 1px solid var(--border);
 }

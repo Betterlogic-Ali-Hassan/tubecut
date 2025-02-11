@@ -10,6 +10,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { formatTime } from "@/lib/format-time";
 
 const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
@@ -32,6 +33,9 @@ const Slider = React.forwardRef<
   const handleValueChange = (newValue: number[]) => {
     setInternalValue(newValue);
     props.onValueChange?.(newValue);
+    if (showTooltip) {
+      setShowTooltipState(true);
+    }
   };
 
   const handlePointerDown = () => {
@@ -56,9 +60,10 @@ const Slider = React.forwardRef<
   }, [showTooltip, handlePointerUp]);
 
   const renderThumb = (value: number) => {
+    const duration = value;
     const thumb = (
       <SliderPrimitive.Thumb
-        className='block h-5 w-[10px] rounded-full  bg-link border-[4px] border-white transition-border duration-300 outline-none  data-[disabled]:cursor-not-allowed hover:border-[3px] cursor-pointer'
+        className='block h-5 w-[10px] rounded-full bg-link border-[4px] border-white transition-border duration-300 outline-none data-[disabled]:cursor-not-allowed hover:border-[3px] cursor-pointer'
         onPointerDown={handlePointerDown}
       />
     );
@@ -70,11 +75,13 @@ const Slider = React.forwardRef<
         <Tooltip open={showTooltipState}>
           <TooltipTrigger asChild>{thumb}</TooltipTrigger>
           <TooltipContent
-            className='px-2 py-1 text-xs'
+            className=' bg-black w-fit border-border border bg-background px-3 py-1.5 text-sm rounded-[6px] text-popover-foreground shadow-md '
             sideOffset={8}
             side={props.orientation === "vertical" ? "right" : "top"}
           >
-            <p>{tooltipContent ? tooltipContent(value) : value}</p>
+            <p className='!text-white'>
+              {tooltipContent ? tooltipContent(duration) : formatTime(duration)}
+            </p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
@@ -91,7 +98,7 @@ const Slider = React.forwardRef<
       onValueChange={handleValueChange}
       {...props}
     >
-      <SliderPrimitive.Track className='relative grow overflow-hidden  bg-[#25272E] data-[orientation=horizontal]:h-1.5 data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-2'>
+      <SliderPrimitive.Track className='relative grow overflow-hidden bg-[#25272E] data-[orientation=horizontal]:h-1.5 data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-2'>
         <SliderPrimitive.Range className='absolute bg-link data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full' />
       </SliderPrimitive.Track>
       {internalValue?.map((value, index) => (
@@ -100,6 +107,7 @@ const Slider = React.forwardRef<
     </SliderPrimitive.Root>
   );
 });
+
 Slider.displayName = SliderPrimitive.Root.displayName;
 
 export { Slider };
