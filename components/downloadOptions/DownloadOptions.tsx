@@ -6,7 +6,9 @@ const DownloadOptions = () => {
     <section className='flex flex-col  items-center mt-[40px] max-w-[600px] mx-auto '>
       <h1 className='self-start max-sm:px-6'>Downloads</h1>
       <Options />
-      <Button>Try New Video</Button>
+      <div className='max-sm:px-6 w-full'>
+        <Button>Try New Video</Button>
+      </div>
     </section>
   );
 };
