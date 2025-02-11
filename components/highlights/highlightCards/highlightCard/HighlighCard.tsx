@@ -1,14 +1,14 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
-import styles from "./highlightCards.module.css";
+import styles from "./highlightCard.module.css";
 const HighlightCard = ({ side }: { side?: string }) => {
   return (
     <>
       {side === "left" ? (
         <>
           {" "}
-          <div className={styles["text-box"]}>
+          <div className={cn(styles["text-box"], styles["text-box2"])}>
             <h2>
               <span className='overlay'>Slice. Cut. Finish.</span>
             </h2>

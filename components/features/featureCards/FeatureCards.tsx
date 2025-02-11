@@ -1,6 +1,6 @@
 import React from "react";
 import FeatureCard from "./featureCard/FeatureCard";
-import styles from "./featureCard.module.css";
+import styles from "./featureCards.module.css";
 import { featuresData } from "@/constant/features";
 
 const FeatureCards = () => {

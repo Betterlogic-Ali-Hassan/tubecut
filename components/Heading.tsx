@@ -7,14 +7,14 @@ interface Props {
 }
 const Heading = ({ title, des, className }: Props) => {
   return (
-    <div className={cn("heading", className)}>
+    <div className={cn("heading max-[400px]:px-6", className)}>
       {title && (
-        <h2>
-          <span className='overlay'>{title}</span>
+        <h2 className='max-sm:!text-center'>
+          <span className='overlay '>{title}</span>
         </h2>
       )}
       {des && (
-        <p>
+        <p className='max-sm:!text-center'>
           <span className='overlay'>{des}</span>
         </p>
       )}

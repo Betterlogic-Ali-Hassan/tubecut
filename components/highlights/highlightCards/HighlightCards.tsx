@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./highlightCards.module.css";
 
-import HighlightCard from "./HighlighCard";
+import HighlightCard from "./highlightCard/HighlighCard";
 const HighlightCards = () => {
   return (
     <div className={styles["highlights-container"]}>
