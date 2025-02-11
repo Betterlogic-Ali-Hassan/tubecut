@@ -5,7 +5,7 @@ import Button from "../ui/button/Button";
 const Hero = () => {
   return (
     <section className={cn("mt-[60px] px-6 ", styles.hero)}>
-      <div className='flex items-center gap-1 flex-col max-w-[634px]'>
+      <div className='flex items-center gap-1 flex-col max-[809px]:max-w-[634px] max-[809px]:w-full w-[634px]'>
         <h1 className='!font-medium text-[32px] !text-center'>
           Take Youtube Offline
         </h1>
