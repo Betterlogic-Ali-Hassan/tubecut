@@ -1,0 +1,58 @@
+.options-wrapper,
+.options-wrapper h1,
+.options-wrapper p,
+.options-wrapper button {
+  font-family: "Inter" !important;
+  color: white;
+}
+.options-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+.option-card {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  flex-grow: 2;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 12px;
+  gap: 8px;
+  background-color: #12111b;
+}
+.size {
+  color: var(--text-foreground) !important;
+  font-size: 14px;
+}
+.resolution {
+  color: var(--text-foreground) !important;
+  font-size: 15px;
+  font-family: "Inter" !important;
+}
+.option-card-button {
+  height: 42px;
+  background: linear-gradient(#292832, #373541);
+  padding: 0 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease-in;
+}
+.option-card-button:hover {
+  background: linear-gradient(#2b2c37b0, #373541ad);
+}
+@media screen and (max-width: 460px) {
+  .option-card {
+    width: 100%;
+  }
+  .options-wrapper {
+    flex-direction: column;
+  }
+  .option-card-button {
+    width: 100%;
+  }
+}
