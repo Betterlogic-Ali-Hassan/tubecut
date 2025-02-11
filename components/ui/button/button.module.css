@@ -31,6 +31,8 @@
   gap: 8px;
   border-radius: 12px;
   font-weight: 500;
+  max-width: 96px;
+  align-self: start;
 }
 .back-btn:hover {
   background: #16181ca2;

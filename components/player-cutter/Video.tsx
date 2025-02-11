@@ -48,15 +48,20 @@ const Video = ({
   };
   return (
     <>
-      <ReactPlayer
-        url='https://www.youtube.com/embed/cIPeJmDrc_g?si=ftIBVUMuRBfFQvIK '
-        className=' h-[315px] w-[560px] overflow-hidden'
-        onDuration={handleDuration}
-        onProgress={handleProgress}
-        progressInterval={100}
-        playing={!seeking}
-        ref={ref}
-      />
+      <div className='relative w-full max-w-[636px] mx-auto aspect-video'>
+        <ReactPlayer
+          url='https://www.youtube.com/embed/cIPeJmDrc_g?si=ftIBVUMuRBfFQvIK '
+          width='100%'
+          height='100%'
+          className='max-w-[636px] max-h-[358px]'
+          onDuration={handleDuration}
+          onProgress={handleProgress}
+          progressInterval={100}
+          playing={!seeking}
+          ref={ref}
+        />
+      </div>
+
       <ProgressBar
         duration={duration}
         currentTime={currentTime}
@@ -67,7 +72,7 @@ const Video = ({
         hoverTime={hoverTime}
         hoverPosition={hoverPosition}
       />
-      <h4 className='text-xl font-inter mt-4 text-[#ffffffe5] tracking-wide'>
+      <h4 className='sm:text-xl text-base font-inter mt-4 text-[#ffffffe5] tracking-wide'>
         How Pakistani Family Vloggers Are Fooling You
       </h4>
     </>

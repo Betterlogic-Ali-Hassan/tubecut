@@ -4,9 +4,11 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className='flex  justify-center mt-[40px] h-full relative gap-10'>
-      <BackBtn />
-      <Cutter />
+    <div className='flex  justify-center min-[809px]:mt-[40px] mb-[40px] h-full relative '>
+      <div className='flex max-[809px]:items-center max-[809px]:flex-col justify-center gap-10 max-[809px]:mb-[40px] max-sm:px-5'>
+        <BackBtn />
+        <Cutter />
+      </div>
     </div>
   );
 };
