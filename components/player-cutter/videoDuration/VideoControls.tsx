@@ -16,12 +16,13 @@ const VideoControls = ({
   onSeekMouseDown,
   onSeekMouseUp,
 }: VideoControlsProps) => {
+  const total = range[1] - range[0];
   return (
     <>
       <div className='flex items-center justify-between mb-3'>
         <h4 className='text-white text-[15px]'>Duration</h4>
         <span className='text-text-foreground text-sm'>
-          {formatTime(duration)}
+          {formatTime(total)}
         </span>
       </div>
       <div className={styles["duration-wrapper"]}>
