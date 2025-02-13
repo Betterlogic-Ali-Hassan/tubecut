@@ -107,7 +107,7 @@ const Hero = () => {
             <X size={24} />
           </span>
         </div>
-        {error && (
+        {error && url !== "" && (
           <p className='mt-2 pl-1 !text-[#e92525] !font-medium'>{error}</p>
         )}
         <div
