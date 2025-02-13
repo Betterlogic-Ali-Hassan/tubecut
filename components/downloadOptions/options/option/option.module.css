@@ -43,6 +43,9 @@
   font-weight: 500;
   transition: all 0.3s ease-in;
 }
+.icon-btn {
+  padding: 0 10px;
+}
 .option-card-button:hover {
   background: linear-gradient(#2b2c37b0, #373541ad);
 }
